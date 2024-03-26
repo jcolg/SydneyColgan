@@ -1,0 +1,725 @@
+/**
+* Template Name: Laura
+* Updated: Mar 10 2024 with Bootstrap v5.3.3
+* Template URL: https://bootstrapmade.com/laura-free-creative-bootstrap-theme/
+* Author: BootstrapMade.com
+* Heavily edited by Jordan Colgan
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #31302f;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #61605f;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  z-index: 997;
+  height: 80px;
+}
+
+#header.header-color {
+  background: rgb(237, 181, 191);
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 3vw;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 28px;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #2d2a2a;
+}
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+@media (max-width: 991px) {
+  .navbar ul {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar-mobile ul {
+    display: block;
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    background: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 25px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: transparent;
+  transition: 0.4s;
+  z-index: 999;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 5px;
+  right: 50%; /* Center horizontally */
+  transform: translateX(50%); /* Adjust horizontally */
+  color: white;
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 0;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+  overflow-y: auto;
+  transition: 0.4s;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: black;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+  color: #2d2a2a;
+  font-weight: bold;
+}
+
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
+  margin: 15px;
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 10px 0;
+}
+
+.section-bg {
+  background-color: white;
+}
+
+.section-title {
+  text-align: center;
+  padding: 30px 0;
+  position: relative;
+}
+
+.section-title h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: lighter;
+  letter-spacing: 4px;
+  color: #4d6d9a;
+  text-transform: uppercase;
+  margin-top: 30px;
+  padding-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 575px) {
+  .section-title h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+  padding: 20px 0;
+  background-color: #f4f5f6;
+  min-height: 40px;
+  margin-top: 78px;
+}
+
+@media (max-width: 992px) {
+  .breadcrumbs {
+    margin-top: 60px;
+  }
+}
+
+.breadcrumbs h2 {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .breadcrumbs h2 {
+    margin: 0 0 10px 0;
+  }
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.breadcrumbs ol li+li {
+  padding-left: 10px;
+}
+
+.breadcrumbs ol li+li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: #6c757d;
+  content: "/";
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs .d-flex {
+    display: block !important;
+  }
+
+  .breadcrumbs ol {
+    display: block;
+  }
+
+  .breadcrumbs ol li {
+    display: inline-block;
+  }
+}
+
+/*--------------------------------------------------------------
+# About Me
+--------------------------------------------------------------*/
+
+.about-container {
+  position: relative;
+  padding: 20px 10px 80px;
+  background-color: white;
+}
+
+.about-container .grid-container {
+  flex: 1;
+}
+
+.about-container .grid-container {
+  display: flex;
+}
+
+.about-container .grid-item img {
+  max-width: 100%;
+  margin-bottom: 20px; /* Adds space between image and text when stacked */
+}
+
+.about-container .grid-item {
+  padding-top: 10px;
+  padding-left: 10px;
+  align-items: center;
+
+}
+
+.about-container .paragraph {
+  text-align: justify;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+.about-container p {
+  font-weight: lighter;
+  color: #6a859c;
+  font-size: 14px;
+}
+
+.about-container .section-title h2{
+  font-size: 28px;
+  margin-top: 45px;
+}
+
+/* Media query for smaller screens like iPhone */
+@media screen and (max-width: 768px) {
+  .about-container .grid-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items horizontally */
+  }
+
+
+  .about-container .grid-item {
+    padding-top: 0; /* Remove top padding for smaller screens */
+    padding-left: 0; /* Remove left padding for smaller screens */
+    text-align: center; /* Center text horizontally */
+  }
+
+  .about-container .grid-item img {
+    max-width: 80%; /* Adjust width of the image for smaller screens */
+    margin-bottom: 20px; /* Add some space between the image and text */
+    
+  }
+
+}
+
+/*--------------------------------------------------------------
+# Video projects
+--------------------------------------------------------------*/
+.video-container {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+}
+
+.section-title h2 {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.tab-menu {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 4px;
+  transition: background-color 300ms ease;
+  color: white;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 0 8px;
+  background-color: rgb(146, 160, 173);
+}
+
+.button.initially-active {
+  background-color: rgb(134, 179, 209);
+}
+
+.tab-pane {
+  position: relative;
+  display: none;
+}
+
+.tab-active {
+  display: block;
+}
+
+.video iframe {
+  width: 940px;
+  height: 528px;
+  position: relative;
+  padding: 0;
+}
+
+.project-info h4 {
+  color: #676770;
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  font-weight: lighter;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.project-info p {
+  font-family: "Raleway", sans-serif;
+  color: #6a859c;
+  font-size: 14px;
+  font-weight: lighter;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .button {
+    margin-bottom: 10px;
+  }
+
+  .video-container .video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+  }
+
+  .video-container .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .project-info p {
+    margin-bottom: 50px; /* Adjusted margin for better spacing on smaller screens */
+  }
+}
+
+
+
+
+/*--------------------------------------------------------------
+# End Video projects
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Spotify projects
+--------------------------------------------------------------*/
+
+.spotify-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.spotify-container h2 {
+  font-family: "Raleway", sans-serif;
+  color: rgb(77, 109, 154);
+  font-size: 28px;
+  font-weight: lighter;
+  text-align: center;
+  letter-spacing: 4px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.spotify-container p {
+  font-family: "Raleway", sans-serif;
+  color: rgb(106, 133, 156);
+  font-size: 16px;
+  font-weight: lighter;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.spotify-container .col {
+  flex: 0 0 auto;
+  width: 33.333%; 
+  padding: 0 15px;
+  margin-bottom: 30px; 
+}
+
+.spotify-container .project-img {
+  display: block;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 767px) {
+  .spotify-container .col {
+    width: 90%;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# End Spotify projects
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# pdf projects
+--------------------------------------------------------------*/
+
+.pdf-container {
+  background-color: #192024;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.pdf-container .section-title {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.pdf-container .section-title h2 {
+  color: white;
+  margin-top: 20px;
+  margin-bottom: -10px;
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.pdf-container .project-item {
+  width: calc(50% - 40px);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pdf-container .pdf-wrapper {
+  width: 60%;
+  box-shadow: 2px 2px 0 0 white, -2px -2px 0 0 grey;
+  padding: 5px;
+}
+
+.pdf-container .pdf-wrapper iframe {
+  width: 100%;
+  height: 280px;
+}
+
+.pdf-container .project-info {
+  width: 100%;
+  padding: 20px 35px;
+  margin-bottom: 60px;
+}
+
+.pdf-container .project-info h4 {
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-weight: lighter;
+  text-align: center;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.pdf-container .project-info p {
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-weight: lighter;
+  text-align: center;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 767px) {
+  .pdf-container {
+    width: 100%;
+  }
+
+  .pdf-container .project-item {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .pdf-container .pdf-wrapper {
+    width: 50%;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# End pdf projects
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+#footer .footer-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+#footer .image-container {
+  margin-right: 20px;
+  margin-left: 20px;
+  flex: 0 0 auto; /* Let the item shrink and grow, but don't allow it to grow beyond its initial size */
+  max-width: 50%; /* Set a maximum width for the image container */
+}
+
+#footer .text-container {
+  flex-grow: 1;
+}
+
+#footer .text-container .contact {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  color: rgb(103, 103, 112);
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+}
+
+#footer .footer-link {
+  font-family: "Open Sans", sans-serif;
+  display: block;
+  margin-bottom: 6px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(213, 213, 224);
+  color: rgb(102, 140, 173);
+  font-size: 14px;
+  font-weight: 300;
+  text-decoration: none;
+  max-width:fit-content; /* Allow the links to take full width of the container */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+#footer .footer-link:hover {
+  color: rgba(0, 140, 255, 0.84);
+}
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  #footer .image-container {
+    margin-right: 0;
+    margin-left: 10px;
+    max-width: 100%; /* Allow the image container to take full width */
+  }
+
+  #footer .text-container .contact, a {
+    font-size: 14px; /* Adjust the font size as needed */
+    line-height: 16px; /* Adjust the line height as needed */
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+
+  #footer .footer-link {
+    max-width: fit-content;
+  }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+
+#footer .copyright {
+  text-align: center;
+  margin: 10px 0 5px 0;
+  color: white;
+}
+
+#footer .credits, a {
+  text-align: center;
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: white;
+}
